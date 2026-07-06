@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️ Pour Kany ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd1dc);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    max-width:700px;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    animation:fadeIn 2s;
+}
+
+h1{
+    color:#e91e63;
+    font-size:38px;
+}
+
+p{
+    font-size:22px;
+    line-height:1.8;
+    color:#444;
+}
+
+.heart{
+    position:fixed;
+    color:#ff2d55;
+    animation:fall linear infinite;
+    top:-10%;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(120vh) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:scale(.8);}
+    to{opacity:1;transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>❤️ Pour Kany ❤️</h1>
+
+<p>
+Mon amour Kany 🥹❤️,<br><br>
+
+Aujourd'hui, cela fait déjà <b>plus d'un an</b> que nous écrivons notre histoire ensemble. 📖💕
+Chaque jour passé avec toi est un cadeau que la vie m'offre. Tu es mon sourire dans les jours difficiles 😊, mon bonheur dans les jours heureux 🌹 et la plus belle personne que j'ai la chance d'avoir dans ma vie. 💖
+
+Merci pour tous les souvenirs que nous avons créés ensemble, pour ton amour, ta patience, tes câlins et tous ces petits moments qui rendent mon cœur heureux. 🫶✨
+
+Peu importe ce que l'avenir nous réserve, je veux continuer à avancer avec toi, main dans la main. 🤝❤️
+
+Je t'aime plus que les mots ne pourront jamais l'exprimer. 💘♾️
+
+Tu es et tu resteras une partie de mon cœur. ❤️🥹
+
+<br><br>
+
+<b>Joyeux plus d'un an d'amour, mon amour. 💍💕</b>
+
+<br><br>
+
+❤️ Je t'aime infiniment, Kany. ❤️
+</p>
+
+<h2>💖💖💖</h2>
+
+</div>
+
+<script>
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*30)+"px";
+    heart.style.animationDuration=(3+Math.random()*5)+"s";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+setInterval(createHeart,250);
+</script>
+
+</body>
+</html>
